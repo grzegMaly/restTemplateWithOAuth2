@@ -46,7 +46,7 @@ public class OAuthClientInterceptor implements ClientHttpRequestInterceptor {
         OAuth2AuthorizedClient client = manager.authorize(oAuth2AuthorizeRequest);
 
         if (isNull(client)) {
-            throw new IllegalStateException("Missing credentials");
+              throw new IllegalStateException("Missing credentials");
         }
 
         request.getHeaders().add(HttpHeaders.AUTHORIZATION,
